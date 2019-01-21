@@ -11,7 +11,7 @@ module.exports = function(deployer, network, accounts) {
             let contractAddress = CertificationRegistry.address;
             console.log(contractAddress);
             //save account's address and contract's address
-            fs.writeFile('ethconn.json', JSON.stringify({account: account, contract: contractAddress}) , function (err) {
+            fs.writeFile('ethconn.json', JSON.stringify({AccountAddress: account, MasterContract: contractAddress}) , function (err) {
               if (err) throw err;
               console.log('Saved!');
             }); 
